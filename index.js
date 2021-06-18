@@ -19,10 +19,8 @@ myFunction();
 /*   Every scope has access to all the variables from all its parent scopes. In this cases, the nestedFunction 
 is looking for a variable called 'internal', but it cannot find it within the current scope. So it look up in 
 the scope chain and find the variable 'internal' in its parent scope with is the scope of myFunction. Now, the 
-nestedFunction can use that variable. This is just like when myFunction is invoked, it needs to use a variable 
-called 'external' but it cannot find it in the current scope, so it look up in the scope chain and find 
-it in the global scope. But it is important to note that this doesn't work the other way around. A certain scope
-will never has access to the variables of the inner scope. 
+nestedFunction can use that variable. But it is important to note that this doesn't work the other way around. 
+A certain scope will never has access to the variables of the inner scope. 
 
 */
 
@@ -288,6 +286,8 @@ console.log(cuboidTwo.surfaceArea()); // 130
 // console.log(cube);
 // console.log(cube.volume());
 // console.log(cube.surfaceArea());
+
+
 
 
 
