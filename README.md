@@ -29,13 +29,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+forEach and .map both loop over an array  and apply some operations to each item. forEach doesn't return anything by itself, but .map will return a new array which is not equal to the original array.
+
 2. Explain the difference between a callback and a higher order function.
+A callback function is a function that is passed to another function as an argument.
+A higher order function is a function that accepts callback functions as parameters or returns another function.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
+A closure means that an inner function always has access to the variable from all its parent function scopes. 
+I solved the counter problem using a recursion. I let the counter equals to num + num-1, if it is a large number and num-2 is bigger than 0, I let num = num-2, and call the function itself again and pass the new value of num. This is like I am having another inner function inside the summation function even though they are the same. Then when the inner summation function is called, it will reach outside to get the variable num, and run it. After the second run, if at this time num-2 still larger than 0, then it will call itself again...until num-2 reaches 0 or -1. It will stop.  
+
 
 4. Describe the four principles of the 'this' keyword.
+a.window Binding - if none of the other rules apply, 'this' defaults to the window, the global object in node or undefined in strict mode. 
+b. Implicit Binding -it applies to objects with methods. When the function is invoked, look to the left of the dot, that's what 'this' refers to.
+c. Explicit Binding. There are three ways: we use .call, .apply or .bind.    .call and .apply- immediately invokes the function. The difference between these two is: when we use .call, we pass in arguments 1 by 1, with .apply, we pass in arguments as an array. 
+.bind - does not immediately invoke the function, instead it returns a brand new function that can be invoked later, we also pass in arguments 1 by 1 here. 
+
+
 
 5. Why do we need super() in an extended class?
+super() is used to call the constructor of the parent class and to access methods and attributes from the parent. 
+
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
