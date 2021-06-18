@@ -36,14 +36,15 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 
 function summation(num) {
-  let count = num + num - 1;
-  if (num - 2 > 0) {
-    num = num - 2;
+  let count = 0;
+  count += num;
+  if (num > 1) {
+    num = num - 1;
     count += summation(num);
   }
   return count;
 }
-// console.log(summation(10));
+// console.log(summation(100));
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
