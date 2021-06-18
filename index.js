@@ -36,10 +36,16 @@ will never has access to the variables of the inner scope.
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
+
 function summation(num) {
-
-
+  let count = num + num - 1;
+  if (num - 2 > 0) {
+    num = num - 2;
+    count += summation(num);
+  }
+  return count;
 }
+console.log(summation(10));
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
